@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Poppins, "Segoe UI", sans-serif;
+
+  /* overflow: hidden; */
+  /* background: purple; */
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: black;
+}
+
+.nav {
+  height: 60px;
+  width: 100%;
+  /* background: white; */
+  display: flex;
+  justify-content: space-between;
+  /* border-bottom: 2px solid whitesmoke; */
+  align-items: center;
+  padding: 0 4vw;
+  color: aliceblue;
+}
+.nav-part2 {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1vw;
+  color: aliceblue;
+  gap: 40px;
+}
+
+.container {
+  height: calc(100% - 60px);
+  width: 100%;
+  display: flex;
+  position: relative;
+  /* background-color: #3e8e41; */
+}
+
+.logo h2 {
+  /* padding-left: 1vw; */
+  /* font-size: 3vw; */
+  /* font-weight: 700; */
+}
+
+.nav h2 {
+  font-size: 3vw;
+  color: aliceblue;
+}
+
+.nav h4 {
+  font-size: 1.4vw;
+  /* padding: 1em 0em; */
+  color: aliceblue;
+}
+
+.nav i {
+  /* background-color: aqua; */
+  font-size: 1.4vw;
+  font-weight: 700;
+  display: none;
+}
+
+a {
+  text-decoration: none !important ;
+  color: white;
+}
+
+h4:hover {
+  /* background-color: #272832; */
+  transform: scale(1.4);
+  color: white;
+}
+
+a:visited {
+  text-decoration: none !important ;
+  color: aliceblue;
+}
+
+.left {
+  height: 100%;
+  width: 50%;
+  padding: 5vw 4vw;
+  color: white;
+}
+
+.right {
+  height: 100%;
+  width: 45%;
+  /* background-color: #3e4b8e; */
+}
+
+.left h1 {
+  font-size: 4vw;
+  font-weight: 700;
+}
+
+.left p {
+  /* padding: 2.3vw 0; */
+  /* font-weight: 700; */
+  margin-top: 2vw;
+  margin-bottom: 3vw;
+  font-size: 1.6vw;
+  color: lightslategray;
+  width: 60%;
+}
+
+.left span {
+  color: lightgreen;
+}
+
+.left button {
+  padding: 10px;
+  background-color: lightgreen;
+  border-radius: 6px;
+  font-size: 1.4vw;
+  color: black;
+}
+
+/* .left button:hover{
+    transform: scale(1.3);
+} */
+
+button:hover {
+  opacity: 0.6;
+}
+
+.right img {
+  width: 98%;
+  height: 98%;
+  border-radius: 2px;
+  border-color: aliceblue;
+  transition: box-shadow 0.3s ease-in-out;
+  /* box-shadow: 0 3px 10px rgba(241, 241, 246, 0.5); */
+}
+
+.right img:hover {
+  box-shadow: -8px 4px 9px rgba(5, 119, 233, 0.607); /*White glow effect */
+  /* box-shadow: 0 3px 10px rgba(9, 9, 121, 0.5); */
+}
+
+.nav button {
+  padding: 8px;
+  background-color: lightgreen;
+  border-radius: 5px;
+  font-size: 1.2vw;
+}
+
+@media (max-width: 700px) {
+  .nav {
+    /* background-color: lightslategray; */
+    border-bottom: 2px solid whitesmoke;
+    /* color: aliceblue; */
+  }
+  .nav h2 {
+    font-size: 6vw;
+    font-weight: 700;
+  }
+  .nav h4 {
+    /* display: none; */
+  }
+  .nav-part2 button {
+    /* display: none; */
+  }
+
+  .nav i {
+    /* background-color: aqua; */
+    display: block;
+    font-size: 4.5vh;
+    font-weight: 700;
+  }
+
+  .nav-part2 {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    /* right: -100%; */
+    height: 100vh;
+    width: min(15em, 100%);
+    z-index: 10;
+    /* border-left: 1px solid white; */
+    display: block;
+    transition: right 300ms ease-out;
+  }
+
+  .nav-part2 i.ri-close-large-fill {
+    font-size: 7vh;
+    right: 0;
+    /* padding: 0 4vw; */
+  }
+
+  .remove {
+    right: -100%;
+  }
+
+  .remove i {
+    /* background-color: wheat; */
+    display: block;
+    font-size: 3vh;
+    font-weight: 700;
+  }
+
+  .show {
+    right: 0;
+    margin-top: 9vh;
+  }
+
+  .show + #menu {
+    visibility: hidden;
+  }
+
+  .show + #closemenu {
+    visibility: hidden;
+    color: white;
+  }
+
+  .ri-close-large-fill {
+    bottom: 10vh;
+    font-size: 30vh;
+  }
+
+  .remove + #closemenu {
+    display: none;
+    font-size: 3.5vh;
+    font-weight: 700;
+  }
+  /* .show #menu{
+    display: none !important;
+   } */
+
+  /* .show #closemenu{
+    display: block;
+    
+   } */
+
+  .nav-part2 h4 {
+    font-size: 3.4vh;
+
+    padding: 2vh 2vh;
+    color: aliceblue;
+  }
+
+  /* hamber */
+  /* .nav-part2 i {
+    top: 0;
+    right: 0;
+    font-size: 3vh;
+   } */
+
+  .nav-part2 button {
+    width: 100%;
+    /* margin-left: 14vh; */
+    font-size: 2.2vh;
+  }
+
+  .container {
+    height: calc(100% - 60px);
+    flex-direction: column;
+    /* background-color: aquamarine; */
+  }
+
+  .left {
+    height: 60dvh;
+    width: 100%;
+    /* background-color: #3e8e41; */
+    color: white;
+  }
+
+  .right {
+    height: 40dvh;
+    width: 100%;
+    /* background-color: #3e4b8e; */
+  }
+
+  .left h1 {
+    font-size: 6vh;
+  }
+  .left p {
+    font-size: 2vh;
+    margin: 3vw 0;
+  }
+
+  .left button {
+    font-size: 3vh;
+  }
+
+  .right img {
+    width: 100%;
+
+    border-radius: 2px;
+    border-color: aliceblue;
+  }
+
+  .nav-part2 h4:hover {
+    transform: none;
+    background-color: #272832;
+    /* transform: scale(1.4); */
+
+    color: white;
+  }
+}

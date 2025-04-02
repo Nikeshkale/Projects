@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="navbar.css" />
+    <script src="script.js" defer></script>
+    <title>Nav-Bar</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav">
+        <h2>logo</h2>
+
+        <div class="nav-part2 remove" id="navbar">
+          <!-- <div class="show"> -->
+          <i
+            class="ri-close-large-fill"
+            id="closemenu"
+            onclick="closesidebar()"
+          ></i>
+          <h4><a href="#">Store</a></h4>
+          <h4><a href="#">Courses</a></h4>
+          <h4><a href="#">Career</a></h4>
+          <h4><a href="blog.html">Blog</a></h4>
+          <h4><a href="#">Account</a></h4>
+          <button>Sign In</button>
+
+          <!-- </div> -->
+        </div>
+
+        <i class="ri-menu-3-fill" id="menu" onclick="opensidebar()"></i>
+      </div>
+      <div class="container">
+        <!-- Lorem, ipsum dolor  -->
+        <div class="left">
+          <h1>
+            Learn from the <span>coolest</span> coding platform of <br />
+            India.
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            voluptates officia aut, ut alias est repudiandae eligendi aliquam
+            minus illo?
+          </p>
+          <button>Explore Now</button>
+        </div>
+        <div class="right">
+          <img src="img.jpg" alt="coding" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
