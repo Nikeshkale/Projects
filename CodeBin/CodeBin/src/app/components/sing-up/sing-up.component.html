@@ -1,0 +1,14 @@
+
+
+<form [formGroup]="singupForm" >
+
+<h4>Please SingUp</h4>
+
+<input type="email" placeholder="email here" [formControl]="email" >
+<h5 class="red-text" [hidden]="email.valid || email.untouched">Enter Correct Email addresss</h5>
+<input type="password" placeholder="password here" [formControl]="password">
+<h5 class="red-text" [hidden]="email.dirty || email.untouched">Enter Correct Password</h5>
+<button class="btn-green" [disabled]="singupForm.invalid" (click)="singup()">Singup</button>
+<button class="btn-red" (click)="reset()">Reset</button>
+
+</form>

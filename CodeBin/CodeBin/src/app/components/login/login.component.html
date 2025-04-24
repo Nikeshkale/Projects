@@ -1,0 +1,17 @@
+
+<form [formGroup]="loginForm" >
+<h4>Please Login</h4>
+<input type="email" placeholder="email here" [formControl]="email">
+<h5 class="red-text" [hidden]="email.valid || email.untouched">Enter Correct Email Address</h5>
+<input type="password" placeholder="password here" [formControl]="password">
+<h5 class="red-text" [hidden]="password.valid || password.untouched" >password must be more than 6 character</h5>
+<button class="btn-green" [disabled]="loginForm.invalid" (click)="login()">Login</button>
+<button class="btn-red"(click)="reset()">Reset</button>
+
+</form>
+
+
+<!-- <h4>
+email valid - {{email.valid}} <br>
+email untouched - {{email.untouched}}
+</h4> -->

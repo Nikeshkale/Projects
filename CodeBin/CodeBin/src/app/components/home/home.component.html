@@ -1,0 +1,20 @@
+
+<div class="snippet-container">
+  <ul class="snippet-list">
+    @if(isLoading){
+      <li class="loading">Loading...</li>
+    }
+    @else if (items.length === 0) {
+       <li class="loading">No data</li>
+    } @else {
+      @for (item of items; track item.id) {
+        <li class="snippet-item">
+          <a [routerLink]="['/snippet', item.id]" class="snippet-link">
+            {{ item.title }}
+          </a>
+          <!-- <a *ngIf="item?.id" [routerLink]="['/snippet', item.id]">...</a> -->
+        </li>
+      }
+    }
+  </ul>
+</div>

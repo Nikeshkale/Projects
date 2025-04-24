@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at 30% 30%, #0d0f1a, #000);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  position: relative;
+  margin-top: 90px;
+}
+
+.glow-ring {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border: 8px solid #00f0ff;
+  border-radius: 50%;
+  animation: rotateGlow 10s linear infinite;
+  filter: drop-shadow(0 0 30px #00f0ff);
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.05); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.content {
+  text-align: center;
+  z-index: 2;
+}
+
+.content h1 {
+  font-size: 8rem;
+  color: #00f0ff;
+  text-shadow: 0 0 20px #00f0ff;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #eee;
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.glow-button {
+  padding: 12px 30px;
+  background: transparent;
+  border: 2px solid #00f0ff;
+  color: #00f0ff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 15px #00f0ff;
+}
+
+.glow-button:hover {
+  background: #00f0ff;
+  color: #000;
+  box-shadow: 0 0 25px #00f0ff, 0 0 40px #00f0ff;
+}

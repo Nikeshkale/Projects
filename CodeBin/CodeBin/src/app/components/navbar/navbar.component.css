@@ -1,0 +1,78 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f0f0f;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #00f0ff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo a {
+  color: #00f0ff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.3s;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.nav-links li a:hover {
+  color: #00f0ff;
+  transform: scale(1.1);
+  background: rgba(0, 240, 255, 0.1);
+}
+
+
+
+/* Active Route Styling */
+.active {
+  color: #00f0ff !important;
+  border-bottom: 2px solid #00f0ff;
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}

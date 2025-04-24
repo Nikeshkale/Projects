@@ -1,0 +1,58 @@
+<!-- <p>user-profile works!</p>
+{{phoneNumber | countryCode:"AUS"}} -->
+
+
+<!-- <h4 [style.backgroundColor]="bgColor" >Name - {{ name | titlecase }} Status - {{ isStatus ? "Single" : "Coder" }}  Salary - {{ salary | currency:"INR" }}</h4> -->
+
+<!-- custom directives attribute -->
+
+<!-- <h4 appHighlight >Name - {{ name | titlecase }} Status - {{ isStatus ? "Single" : "Coder" }}  Salary - {{ salary | currency:"INR" }}</h4> -->
+
+
+<h4 #myheading >Name - {{ name | titlecase }} Status - {{ isStatus ? "Single" : "Coder" }}  Salary - {{ salary | currency:"INR" }}</h4>
+
+
+<!-- <h4> Name - {{name}} , Status - {{isStatus ? "Single" : "Coder"}}  Salary - {{salary}} </h4> -->
+<button (click)="sendData()"> send data</button>
+
+<!-- {{}}  This called interpolation -->
+
+
+
+<!-- [] -> is called property binding () -> called event binding -->
+
+<!-- <button [disabled]="isDisable">Click me</button> 
+
+<input type="text"  (input)="onChange($event)">
+<input type="text" [(ngModel)]="inputValue" /> -->
+
+<!-- <h3>Input Value - {{ inputValue }}</h3>
+
+<!-- track user.name is use for select unique data -->
+<!-- @FOR is a control flow syntax -->
+
+ <!-- <div>
+  @for(user of users; track user.name){ @if(user.salary > 5000) {
+  <h4>
+    Name: {{ user.name }} Status: {{ user.isSingle?"Single":"coder" }} Salary: {{ user.salary }}
+  </h4>
+  }@else{
+  <h4>Name: {{ user.name }} Status: {{ user.isSingle?"Single":"coder" }} Salary: hidden</h4>
+  } }
+</div>
+
+<hr /> -->
+
+<!-- Directives this also structure directives  -->
+
+<!-- <div *ngFor="let user of users">
+  <h4 *ngIf="user.salary > 5000; else elseBlock">
+    Name: {{ user.name }}, Status: {{ user.isSingle?"Single":"coder" }}, Salary: {{ user.salary }}
+  </h4>
+  <ng-template #elseBlock>
+   <h4> Name: {{ user.name }} Status: {{ user.isSingle ? "single" : "coder" }} Salary: {{ "hidden" }}</h4>
+  </ng-template>
+</div> -->
+
+
+

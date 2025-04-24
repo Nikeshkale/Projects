@@ -1,0 +1,35 @@
+
+<div>
+  <nav class="navbar">
+    <h4 class="logo"><a routerLink="/">CodeBin</a></h4>
+    <ul class="nav-links">
+      <li><a routerLink="/create" routerLinkActive="active">Create Bin</a></li>
+        @if(isAuthenticated){
+         <li style="cursor: pointer;"><a (click)="logout()">Logout</a></li>
+         <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+      }@else{
+           <li><a routerLink="/login" routerLinkActive="active">LogIn</a></li>
+          <li><a routerLink="/signup" routerLinkActive="active">SignUp</a></li>
+      }
+
+      
+  
+    </ul>
+  </nav>
+  <hr />
+</div>
+
+<!-- <router-outlet></router-outlet> -->
+
+
+<!-- <div>
+    <nav>
+        <h4><a routerLink="/">CodeBin</a></h4>
+        <ul>
+            <li><a routerLink="/login" routerLinkActive="active">LogIn</a></li>
+            <li><a routerLink="/signup" routerLinkActive="active">SingUp</a></li>
+        </ul>
+        <hr/>
+    </nav>
+</div>
+<router-outlet></router-outlet> -->
